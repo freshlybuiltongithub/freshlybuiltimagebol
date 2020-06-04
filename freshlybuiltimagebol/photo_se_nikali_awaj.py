@@ -1,5 +1,5 @@
-from photo_se_text import PhotoShabd
-from text_bol_uthega import ShabdDhwani
+from .photo_se_text import PhotoShabd
+from .text_bol_uthega import ShabdDhwani
 
 
 
