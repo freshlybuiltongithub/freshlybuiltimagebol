@@ -1,5 +1,5 @@
 from googletrans import Translator
-from bhasha_codes import bhasha_kosh
+from .bhasha_codes import bhasha_kosh
 from gtts import gTTS
 
 class ShabdDhwani:
