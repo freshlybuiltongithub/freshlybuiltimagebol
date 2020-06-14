@@ -28,3 +28,15 @@ Run `freshlybuiltimagebol.ShabdDhwani.shabd_ki_bhasha_jaano(shabd)`.
 
 d)Convert text to sound output(shabd_se_dhwani)
 Run `freshlybuiltimagebol.ShabdDhwani.shabd_se_dhwani(shabd,bhasha,filename)`.
+
+e)Recognize text from natural scene image(natural_photo_se_text)
+Run `freshlybuiltimagebol.NaturalPhotoShabd.text_pehchano(image)`.
+
+**freshlybuiltimagebol.NaturalPhotoShabd.text_pehchano(image,min_confidence=0.85,width=320,height=320,padding=0.00)**  
+
+*Parameters:*  
+- image=input image (type=numpy.ndarray) -**required**  
+- min_confidence= minimum confidence threshold to detect text from image (default=0.85) -*optional*  
+- width=resizing width of image (default=320) -*optional*  
+- height=resizing height of image (default=320) -*optional*  
+- padding = padding of text box around detected text (default=0.00) -*optional*  
