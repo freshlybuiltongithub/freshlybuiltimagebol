@@ -4,10 +4,13 @@ from matplotlib.pyplot import imshow,xticks,yticks
 from pytesseract import image_to_string,pytesseract 
 from PIL import Image
 
+'''this function is removing noise from the image'''
 def remove_noise(image):
     image = fastNlMeansDenoisingColored(image,None,20,10,7,21)
     return image
 
+'''this function is removing skewness.
+first, it calculate the angle and accordingly rotate image'''
 def remove_skew(image):
     in_gray = cvtColor(image, COLOR_BGR2GRAY)
     in_gray = bitwise_not(in_gray)
@@ -24,14 +27,21 @@ def remove_skew(image):
     image = warpAffine(image, M, (w, h),flags=INTER_CUBIC, borderMode=BORDER_REPLICATE)
     return image
 
+'''for removing blurness from the image,
+this function increase sharpness of the image.'''
 def shapness_blur(image):
     sharpen_kernel = array([[-1,-1,-1], [-1,9,-1], [-1,-1,-1]])
     image = filter2D(image, -1, sharpen_kernel)
     return image
 
+'''using pytesseract, this function extracting text from the image.'''
 def to_text(image):
-    pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-    string_from_image = image_to_string(image,lang='eng')
+    try:
+        pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+        string_from_image = image_to_string(image,lang='eng')
+    except Exception:
+        pytesseract.tesseract_cmd = r"C:\Program Files(x86)\Tesseract-OCR\tesseract.exe"
+        string_from_image = image_to_string(image,lang='eng')
     return string_from_image
 
 ##plot image in output
