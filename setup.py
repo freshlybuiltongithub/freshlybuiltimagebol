@@ -9,7 +9,7 @@ README = (HERE / "README.md").read_text()
 setup(
   name = 'freshlybuiltimagebol',         
   packages = ['freshlybuiltimagebol'],   
-  version = '0.0.1b',     
+  version = '0.0.2',     
   license='MIT',        
   description = 'Image Bhi Bol Uthegi',
   long_description=README,
