@@ -9,22 +9,26 @@ README = (HERE / "README.md").read_text()
 setup(
   name = 'freshlybuiltimagebol',         
   packages = ['freshlybuiltimagebol'],   
-  version = '0.0.2',     
+  version = '0.0.2.1',     
   license='MIT',        
-  description = 'Image Bhi Bol Uthegi',
+  description = 'Photo Bhi Bol Uthega',
   long_description=README,
   long_description_content_type="text/markdown",
   author = 'Vishal Sharma',                   
   author_email = 'vishalsharma.gbpecdelhi@gmail.com',      
   url = 'https://github.com/FreshlyBuilt/freshlybuiltimagebol',   
-  download_url = 'https://github.com/FreshlyBuilt/freshlybuiltimagebol/archive/v0.0.2.tar.gz',  
+  download_url = 'https://github.com/FreshlyBuilt/freshlybuiltimagebol/archive/v0.0.2.1.tar.gz',  
   keywords = ['Image', 'Audio', 'Text'],   
   install_requires=[            
           'hyper',
           'googletrans',
           'gTTS',
           'Pillow',
-          'pytesseract'
+          'pytesseract',
+          'opencv-python',
+          'numpy',
+          'matplotlib',
+          'imutils'
       ],
   classifiers=[
     'Development Status :: 3 - Alpha',
