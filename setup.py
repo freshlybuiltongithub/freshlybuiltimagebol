@@ -1,5 +1,6 @@
 from distutils.core import setup
 from pathlib import Path
+
 # The directory containing this file
 HERE = Path(__file__).parent
 
@@ -9,7 +10,7 @@ README = (HERE / "README.md").read_text()
 setup(
   name = 'freshlybuiltimagebol',         
   packages = ['freshlybuiltimagebol'],   
-  version = '0.0.2.1',     
+  version = '0.0.2.2',     
   license='MIT',        
   description = 'Photo Bhi Bol Uthega',
   long_description=README,
@@ -17,7 +18,7 @@ setup(
   author = 'Vishal Sharma',                   
   author_email = 'vishalsharma.gbpecdelhi@gmail.com',      
   url = 'https://github.com/FreshlyBuilt/freshlybuiltimagebol',   
-  download_url = 'https://github.com/FreshlyBuilt/freshlybuiltimagebol/archive/v0.0.2.1.tar.gz',  
+  download_url = 'https://github.com/FreshlyBuilt/freshlybuiltimagebol/archive/v0.0.2.2.tar.gz',  
   keywords = ['Image', 'Audio', 'Text'],   
   install_requires=[            
           'hyper',
