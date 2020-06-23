@@ -1,7 +1,7 @@
 from distutils.core import setup
-
+from pathlib import Path
 # The directory containing this file
-HERE = pathlib.Path(__file__).parent
+HERE = Path(__file__).parent
 
 # The text of the README file
 README = (HERE / "README.md").read_text()
