@@ -10,7 +10,7 @@ this_directory = path.abspath(path.dirname(__file__))
 
 # Import the README and use it as the long-description.
 try:
-    with io.open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
         long_description = f.read()
 except FileNotFoundError:
     long_description = DESCRIPTION
