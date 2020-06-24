@@ -42,14 +42,14 @@ Run `freshlybuiltimagebol.NaturalPhotoShabd.text_pehchano(image)`.
 - padding = padding of text box around detected text (default=0.00) -*optional*
 
  
-f)Download models from the repository(download.py)
-Run `freshlybuiltimagebol.Download.download(model_name)`.  
-for eg - 
-    freshlybuiltimagebol.Download.download('east')
-Note:- EAST model is required to run natural_photo_se_text.py
+f)Download models from the repository(download.py)    
+Run `freshlybuiltimagebol.Download.download(model_name)`.    
+for eg -   
+    freshlybuiltimagebol.Download.download('east')  
+Note:- EAST model is required to run natural_photo_se_text.py  
 
-#Contributors
-Vishal Sharma   G.B. Pant Govt. Engineering College
-Sushmita        G.B. Pant Govt. Engineering College
-Simran          Maharaja Agrasen Institute of Technology
-Kapil Bansal    G.B. Pant Govt. Engineering College 
+#Contributors  
+Vishal Sharma   G.B. Pant Govt. Engineering College  
+Sushmita        G.B. Pant Govt. Engineering College  
+Simran          Maharaja Agrasen Institute of Technology  
+Kapil Bansal    G.B. Pant Govt. Engineering College   
