@@ -1,5 +1,5 @@
 from distutils.core import setup
-from pathlib import Path
+from os import path
 
 DESCRIPTION = """freshlybuiltimagebol is the library made to allow users to perform various
                  operations with text and images including translation to different languages,
