@@ -10,3 +10,4 @@ freshlybuiltimagebol/photo_se_text.py
 freshlybuiltimagebol/text_bol_uthega.py
 freshlybuiltimagebol/README.md
 freshlybuiltimagebol/models/frozen_east_text_detection.pb
+freshlybuiltimagebol/model_downloadable.py
