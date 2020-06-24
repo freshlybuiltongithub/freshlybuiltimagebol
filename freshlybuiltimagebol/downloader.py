@@ -39,7 +39,7 @@ def download_model(model_name):
 
 
 """ testing area"""
-model_name=input("model name: ")
-download_model(model_name)           
+#model_name=input("model name: ")
+#download_model(model_name)           
 
     
