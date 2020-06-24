@@ -39,4 +39,17 @@ Run `freshlybuiltimagebol.NaturalPhotoShabd.text_pehchano(image)`.
 - min_confidence= minimum confidence threshold to detect text from image (default=0.85) -*optional*  
 - width=resizing width of image (default=320) -*optional*  
 - height=resizing height of image (default=320) -*optional*  
-- padding = padding of text box around detected text (default=0.00) -*optional*  
+- padding = padding of text box around detected text (default=0.00) -*optional*
+
+ 
+f)Download models from the repository(download.py)
+Run `freshlybuiltimagebol.Download.download(model_name)`.  
+for eg - 
+    freshlybuiltimagebol.Download.download('east')
+Note:- EAST model is required to run natural_photo_se_text.py
+
+#Contributors
+Vishal Sharma   G.B. Pant Govt. Engineering College
+Sushmita        G.B. Pant Govt. Engineering College
+Simran          Maharaja Agrasen Institute of Technology
+Kapil Bansal    G.B. Pant Govt. Engineering College 

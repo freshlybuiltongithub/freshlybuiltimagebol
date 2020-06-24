@@ -8,3 +8,4 @@
 -- photo_se_nikali_awaj.py
 -- photo_se_text.py
 -- text_bol_uthega.py
+-- download.py
