@@ -18,17 +18,16 @@ def download_model(model_name):
                     print ("Downloading %s" % model_name)
                     response = get(model_url+model_name+".pb", stream=True)
                     total_length = int(response.headers.get('content-length'))
-                    t=tqdm(total=total_length,unit='B',unit_scale=True)
+                    
 
                     if total_length is None:
                         f.write(response.content)
                     else:
-                        dl = 0
-                        for data in response.iter_content(chunk_size=1024):
-                            t.update(len(data))
+                        chunk_size=1024
+                        for data in tqdm(iterable = response.iter_content(chunk_size),total=total_length/chunk_size, unit = 'KB'):
                             f.write(data)
-                        t.close()
-                if total_length != 0 and t.n != total_length:
+                        tqdm.close()
+                if total_length != 0 and tqdm.n != total_length:
                     print("ERROR, something went wrong")
                 print('model download successful')
                 return 1
@@ -40,7 +39,7 @@ def download_model(model_name):
 
 
 """ testing area"""
-#model_name=input("model name: ")
-#download_model(model_name)           
+model_name=input("model name: ")
+download_model(model_name)           
 
     
