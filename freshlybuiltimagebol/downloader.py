@@ -46,7 +46,7 @@ class img_bol_downloader:
         
 
 """ testing area"""
-model_name=input("model name: ")
-img_bol_downloader.download_model(model_name)           
+#model_name=input("model name: ")
+#img_bol_downloader.download_model(model_name)           
 
     
