@@ -43,11 +43,14 @@ Run `freshlybuiltimagebol.NaturalPhotoShabd.text_pehchano(image)`.
 - padding = padding of text box around detected text (default=0.00) -*optional*  
 
 f)Preprocess image before text extraction(OCR_Printed_text.py)
-Run `freshlybuiltimagebol.ImageProcess.remove_noise(image)`.  
+Run 
+
+    `freshlybuiltimagebol.ImageProcess.remove_noise(image)`.  
     `freshlybuiltimagebol.ImageProcess.remove_skew(image)`.  
     `freshlybuiltimagebol.ImageProcess.sharpness_blur(image)`.  
     `freshlybuiltimagebol.ImageProcess.to_text(image)`.  
     `freshlybuiltimagebol.ImageProcess.plot_image(image)`.  
+    
 Parameter:  
     image=input image (type=numpy.ndarray) **-required** 
 
