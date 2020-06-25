@@ -1,0 +1,12 @@
+include README.md LICENSE
+setup.cfg
+setup.py
+freshlybuiltimagebol/OCR_Printed_Text.py
+freshlybuiltimagebol/__init__.py
+freshlybuiltimagebol/bhasha_codes.py
+freshlybuiltimagebol/natural_photo_se_text.py
+freshlybuiltimagebol/photo_se_nikali_awaj.py
+freshlybuiltimagebol/photo_se_text.py
+freshlybuiltimagebol/text_bol_uthega.py
+freshlybuiltimagebol/README.md
+freshlybuiltimagebol/downloader.py
