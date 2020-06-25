@@ -30,6 +30,7 @@ d)Convert text to sound output(shabd_se_dhwani)
 Run `freshlybuiltimagebol.ShabdDhwani.shabd_se_dhwani(shabd,bhasha,filename)`.
 
 e)Recognize text from natural scene image(natural_photo_se_text)
+Run `freshlybuiltimagebol.download('east_text_detection')` first to download the model.
 Run `freshlybuiltimagebol.NaturalPhotoShabd.text_pehchano(image)`.
 
 **freshlybuiltimagebol.NaturalPhotoShabd.text_pehchano(image,min_confidence=0.85,width=320,height=320,padding=0.00)**  
@@ -40,3 +41,14 @@ Run `freshlybuiltimagebol.NaturalPhotoShabd.text_pehchano(image)`.
 - width=resizing width of image (default=320) -*optional*  
 - height=resizing height of image (default=320) -*optional*  
 - padding = padding of text box around detected text (default=0.00) -*optional*  
+
+## Contributors
+[Vishal Sharma](https://github.com/vishal2612200/):		G.B. Pant Govt. Engineering College
+
+[Kapil Bansal](https://github.com/KapilBansal320):		G.B. Pant Govt. Engineering College
+
+[Ravi Pawar](https://github.com/ravi5175):		G.B. Pant Govt. Engineering College
+
+[Sushmita](https://github.com/17sushmita):		G.B. Pant Govt. Engineering College
+
+[Simran](https://github.com/ishvik):		Maharaja Agrasen Institute of Technology

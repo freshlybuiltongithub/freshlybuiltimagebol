@@ -1,6 +1,6 @@
+
 from requests import get
 from os import mkdir,path
-from sys import stdout
 from tqdm import tqdm
 
 

@@ -35,7 +35,7 @@ class ImageProcess:
 
     '''for removing blurness from the image,
     this function increase sharpness of the image.'''
-    def shapness_blur(image):
+    def sharpness_blur(image):
         sharpen_kernel = array([[-1,-1,-1], [-1,9,-1], [-1,-1,-1]])
         image = filter2D(image, -1, sharpen_kernel)
         return image
