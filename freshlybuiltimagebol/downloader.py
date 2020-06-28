@@ -71,7 +71,8 @@ class imagebol_model_downloader:
             else:
                 print('model found')
                 print('checking encryption signature')
-                if self.hash_signature_match(model_name,available_models,dir_path,status_code)==1000:
+                self.hash_signature_match(model_name,available_models,dir_path,status_code)
+                if self.status_code==1000:
                     return self.status_code
                 else:
                     print(self.status_code)
@@ -80,7 +81,8 @@ class imagebol_model_downloader:
                     if re_choice =='y':
                         remove(dir_path+"/models/"+model_name[0] +".pb")
                         self.start_downloading(model_name,dir_path,status_code)
-                        return self.hash_signature_match(model_name,available_models,dir_path,status_code)
+                        self.hash_signature_match(model_name,available_models,dir_path,status_code)
+                        return self.status_code
                 
         else: 
             print("no reference found for "+model_name)
@@ -96,19 +98,19 @@ class imagebol_model_downloader:
         except response.exceptions.HTTPError as errh:
             print ("Http Error:",errh)
             self.status_code=1004
-            return status_code
+            return self.status_code
         except response.exceptions.ConnectionError as errc:
             print ("Error Connecting:",errc)
             self.status_code=1005
-            return status_code
+            return self.status_code
         except response.exceptions.Timeout as errt:
             print ("Timeout Error:",errt)
             self.status_code=1006
-            return status_code
+            return self.status_code
         except response.exceptions.RequestException as err:
             print ("OOps: Something Else",err)
             self.status_code=1007
-            return status_code
+            return self.status_code
         with open(dir_path+"/models/"+model_name[0] +".pb", "wb") as f:
             total_length = int(response.headers.get('content-length'))
             if total_length is None:
