@@ -21,8 +21,6 @@ code   meaning
 """
 
 class imagebol_model_downloader:
-    
-    
     status_code=0000
     
     def __init__(self,model_name,status_code=0000):
