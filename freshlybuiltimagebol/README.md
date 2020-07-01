@@ -10,8 +10,6 @@
 
 -- bhasha_codes.py
 
--- downloader.py
-
 -- natural_photo_se_text.py
 
 -- photo_se_nikali_awaj.py

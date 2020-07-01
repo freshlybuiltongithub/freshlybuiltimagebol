@@ -54,6 +54,28 @@ Run
 Parameter:  
     image=input image (type=numpy.ndarray) **-required** 
 
+**imagebol_model_downloader(downloader.py)**
+usecase - to download pretrained models to local machine during implementation for the first time.
+
+method - from freshlybuiltimagebol import imagebol_model_downloader(model_name)
+
+*parameters:*
+- model_name = model name defined in the dictionary structure of available model inside imagebol_model_downloader class
+
+*updates in downloader needed to be done while adding new models*
+ dictionary structure-
+
+ available_models={
+            "F_est":["frozen_east_text_detection","94.4MB","8a9b7f2ebd9bcf8212bfa856b065e6f0"]
+            }
+
+- here key "F_est" is the model_name used as the parameter
+- "frozen_east_text_detection - actual file name   (extension should be .pb)
+- "94.4MB" - actual file size
+- "8a9b7f2ebd9bcf8212bfa856b065e6f0" hash key generated using md5 encryption technique
+
+*important* while updating model file , hash key must be updated. 
+
 ## Contributors
 [Vishal Sharma](https://github.com/vishal2612200/):		G.B. Pant Govt. Engineering College
 
