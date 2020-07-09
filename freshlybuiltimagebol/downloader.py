@@ -2,7 +2,7 @@ from requests import get
 from os import mkdir,path,remove
 from tqdm import tqdm
 from hashlib import md5
-from colorama import Fore
+import colorama as col
 
 """
 freshlybuiltimagebol library model downloader
@@ -128,11 +128,15 @@ class imagebol_model_downloader:
         md5_hash.update(model_handler)
         hash_code=md5_hash.hexdigest()
         if hash_code == model_name[2]:
-            print(Fore.GREEN+"signature matched")
+            col.init(autoreset=True)
+            print(col.Fore.GREEN+"signature matched")
+            col.deinit()
             self.status_code=1000
             return status_code
         else:
+            col.init(autoreset=True)
             print(Fore.RED+"warning signature mismatched, model may not work properly ")
+            col.deinit()
             self.status_code=1009
             return status_code
 
