@@ -54,6 +54,15 @@ Run
 Parameter:  
     image=input image (type=numpy.ndarray) **-required** 
 
+e)Detect Page and crop image(page.py)    
+Run 
+
+    `freshlybuiltimagebol.Page.detect(image)`.    
+ 
+Parameter:  
+    image=input image (type=numpy.ndarray) **-required** 
+   
+   
 **imagebol_model_downloader(downloader.py)**
 usecase - to download pretrained models to local machine during implementation for the first time.
 
