@@ -42,12 +42,7 @@ class ImageProcess:
 
     '''using pytesseract, this function extracting text from the image.'''
     def to_text(image):
-        try:
-            pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-            string_from_image = image_to_string(image,lang='eng')
-        except Exception:
-            pytesseract.tesseract_cmd = r"C:\Program Files(x86)\Tesseract-OCR\tesseract.exe"
-            string_from_image = image_to_string(image,lang='eng')
+        string_from_image = image_to_string(image,lang='eng')
         return string_from_image
 
     ##plot image in output
