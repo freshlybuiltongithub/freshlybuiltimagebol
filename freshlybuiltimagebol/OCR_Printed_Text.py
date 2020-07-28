@@ -1,11 +1,10 @@
 from cv2 import fastNlMeansDenoisingColored
-from cv2 import cvtColor
+from cv2 import cvtColor,imshow,imread
 from cv2 import bitwise_not,threshold,getRotationMatrix2D
-from cv2 import warpAffine,filter2D,imread
+from cv2 import warpAffine,filter2D
 from cv2 import THRESH_BINARY,COLOR_BGR2GRAY,THRESH_OTSU
 from cv2 import INTER_CUBIC,BORDER_REPLICATE,minAreaRect
 from numpy import column_stack,array,where
-from matplotlib.pyplot import imshow,xticks,yticks
 from pytesseract import image_to_string,pytesseract 
 from PIL import Image
 
@@ -45,9 +44,7 @@ class ImageProcess:
         string_from_image = image_to_string(image,lang='eng')
         return string_from_image
 
-    ##plot image in output
-    def plot_image(image):
-        imshow(image)
-        xticks([])
-        yticks([])
-
+    '''show image on screen'''
+    def show_image(image):
+        imshow(' ',image)
+    
