@@ -1,9 +1,12 @@
 from numpy import linalg,ones,diff,array,argmin,argmax,float32
-from cv2 import MORPH_CLOSE,COLOR_BGR2GRAY,ADAPTIVE_THRESH_GAUSSIAN_C
-from cv2 import THRESH_BINARY,BORDER_CONSTANT,RETR_TREE,CHAIN_APPROX_SIMPLE
-from cv2 import resize,morphologyEx,cvtColor,bilateralFilter,adaptiveThreshold
-from cv2 import medianBlur,copyMakeBorder,Canny,findContours,arcLength,approxPolyDP,contourArea
-from cv2 import getPerspectiveTransform,warpPerspective,isContourConvex
+from cv2 import (
+    MORPH_CLOSE,COLOR_BGR2GRAY,ADAPTIVE_THRESH_GAUSSIAN_C,
+    THRESH_BINARY,BORDER_CONSTANT,RETR_TREE,CHAIN_APPROX_SIMPLE,
+    resize,morphologyEx,cvtColor,bilateralFilter,adaptiveThreshold,
+    medianBlur,copyMakeBorder,Canny,findContours,arcLength,approxPolyDP,contourArea,
+    getPerspectiveTransform,warpPerspective,isContourConvex
+    )
+
 class Page:
     def detect(image):
         """Finding Page."""
@@ -29,7 +32,6 @@ class Page:
     def ratio(img, height=800):
         """Getting scale ratio."""
         return img.shape[0] / height
-   
 
     def edges_detection(img, minVal, maxVal):
         """Preprocessing (gray, thresh, filter, border) + Canny edge detection."""

@@ -3,8 +3,8 @@ from cv2 import (
     getRotationMatrix2D, warpAffine,filter2D, imread, imshow,
     THRESH_BINARY, COLOR_BGR2GRAY, THRESH_OTSU,
     INTER_CUBIC, BORDER_REPLICATE, minAreaRect,
-    column_stack, array, where
 )
+from numpy import column_stack, array, where
 from pytesseract import image_to_string,pytesseract 
 from PIL import Image
 
