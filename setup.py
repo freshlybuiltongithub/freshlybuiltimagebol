@@ -30,6 +30,8 @@ setup(
   keywords = ['Image', 'Audio', 'Text'],   
   install_requires=[            
           'hyper',
+          'tqdm',
+          'colorama',
           'googletrans',
           'gTTS',
           'Pillow',
