@@ -1,10 +1,10 @@
-from cv2 import fastNlMeansDenoisingColored
-from cv2 import cvtColor,imshow,imread
-from cv2 import bitwise_not,threshold,getRotationMatrix2D
-from cv2 import warpAffine,filter2D
-from cv2 import THRESH_BINARY,COLOR_BGR2GRAY,THRESH_OTSU
-from cv2 import INTER_CUBIC,BORDER_REPLICATE,minAreaRect
-from numpy import column_stack,array,where
+from cv2 import (
+    fastNlMeansDenoisingColored, cvtColor, bitwise_not, threshold,
+    getRotationMatrix2D, warpAffine,filter2D, imread, imshow,
+    THRESH_BINARY, COLOR_BGR2GRAY, THRESH_OTSU,
+    INTER_CUBIC, BORDER_REPLICATE, minAreaRect,
+)
+from numpy import column_stack, array, where
 from pytesseract import image_to_string,pytesseract 
 from PIL import Image
 
