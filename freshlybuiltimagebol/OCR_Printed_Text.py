@@ -41,6 +41,7 @@ class ImageProcess:
 
     '''using pytesseract, this function extracting text from the image.'''
     def to_text(image):
+ master
         string_from_image = image_to_string(image,lang='eng')
         return string_from_image
 
@@ -48,3 +49,14 @@ class ImageProcess:
     def show_image(image):
         imshow(' ',image)
     
+        try:
+            string_from_image = image_to_string(image,lang='eng')
+        except Exception:
+            pytesseract.tesseract_cmd = r"C:\Program Files(x86)\Tesseract-OCR\tesseract.exe"
+            string_from_image = image_to_string(image,lang='eng')
+        return string_from_image
+
+    ##plot image in output
+    def plot_image(image):
+        imshow('Image',image)
+ master
