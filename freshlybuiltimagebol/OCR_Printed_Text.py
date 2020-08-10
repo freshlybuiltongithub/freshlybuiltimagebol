@@ -59,4 +59,3 @@ class ImageProcess:
     ##plot image in output
     def plot_image(image):
         imshow('Image',image)
- master
