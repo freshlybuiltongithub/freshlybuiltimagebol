@@ -18,7 +18,7 @@ except FileNotFoundError:
 setup(
   name = 'freshlybuiltimagebol',         
   packages = ['freshlybuiltimagebol'],   
-  version = '0.0.2.6',     
+  version = '0.0.2.7',     
   license='MIT',        
   description = 'Photo Bhi Bol Uthega',
   long_description=long_description,
@@ -26,7 +26,7 @@ setup(
   author = 'Vishal Sharma',                   
   author_email = 'vishalsharma.gbpecdelhi@gmail.com',      
   url = 'https://github.com/FreshlyBuilt/freshlybuiltimagebol',   
-  download_url = 'https://github.com/FreshlyBuilt/freshlybuiltimagebol/archive/v0.0.2.6.tar.gz',  
+  download_url = 'https://github.com/FreshlyBuilt/freshlybuiltimagebol/archive/v0.0.2.7.tar.gz',  
   keywords = ['Image', 'Audio', 'Text'],   
   install_requires=[            
           'hyper',
