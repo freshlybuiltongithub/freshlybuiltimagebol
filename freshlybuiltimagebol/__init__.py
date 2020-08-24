@@ -1,9 +1,9 @@
 # Class import
 
-from freshlybuiltimagebol.photo_se_nikali_awaj import PhotoAwaj
-from freshlybuiltimagebol.text_bol_uthega import ShabdDhwani
-from freshlybuiltimagebol.photo_se_text import PhotoShabd
+from freshlybuiltimagebol.downloader import imagebol_model_downloader
 from freshlybuiltimagebol.natural_photo_se_text import NaturalPhotoShabd
 from freshlybuiltimagebol.OCR_Printed_Text import ImageProcess
-from freshlybuiltimagebol.downloader import imagebol_model_downloader
 from freshlybuiltimagebol.page import Page
+from freshlybuiltimagebol.photo_se_nikali_awaj import PhotoAwaj
+from freshlybuiltimagebol.photo_se_text import PhotoShabd
+from freshlybuiltimagebol.text_bol_uthega import ShabdDhwani
