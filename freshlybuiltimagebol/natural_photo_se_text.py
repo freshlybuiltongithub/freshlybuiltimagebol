@@ -1,10 +1,11 @@
+from cv2 import FONT_HERSHEY_SIMPLEX, imread, imshow, putText, rectangle, resize
+from cv2.dnn import blobFromImage, readNet
 from imutils.object_detection import non_max_suppression
-from numpy import cos,sin,array
+from numpy import array, cos, sin
 from pytesseract import image_to_string
-from cv2 import resize,putText,FONT_HERSHEY_SIMPLEX,rectangle,imread,imshow
-from cv2.dnn import readNet,blobFromImage
-#from playsound import playsound
-#from .text_bol_uthega import ShabdDhwani
+
+# from playsound import playsound
+# from .text_bol_uthega import ShabdDhwani
 
 '''
 USE CASE
@@ -17,7 +18,7 @@ cv2.imshow('output',out)
 
 
 class NaturalPhotoShabd:
-    def result_vyakhya_kro(scores, geometry,min_confidence):
+    def result_vyakhya_kro(scores, geometry, min_confidence):
         (numRows, numCols) = scores.shape[2:4]
         rects = []
         confidences = []
@@ -44,8 +45,8 @@ class NaturalPhotoShabd:
                 rects.append((startX, startY, endX, endY))
                 confidences.append(scoresData[x])
         return (rects, confidences)
-    
-    def text_pehchano(image,min_confidence=0.85,width=320,height=320,padding=0.00):
+
+    def text_pehchano(image, min_confidence=0.85, width=320, height=320, padding=0.00):
         '''
         image=input image (type=numpy.ndarray)
         min_confidence= minimum confidence threshold to detect text from image (default=0.85)
@@ -53,7 +54,7 @@ class NaturalPhotoShabd:
         height=resizing height of image (default=320)
         padding =
         '''
-        east='freshlybuiltimagebol/models/frozen_east_text_detection.pb'
+        east = 'freshlybuiltimagebol/models/frozen_east_text_detection.pb'
         orig = image.copy()
         (origH, origW) = image.shape[:2]
         (newW, newH) = (width, height)
@@ -61,15 +62,16 @@ class NaturalPhotoShabd:
         rH = origH / float(newH)
         image = resize(image, (newW, newH))
         (H, W) = image.shape[:2]
-        layerNames = [
-            "feature_fusion/Conv_7/Sigmoid",
-            "feature_fusion/concat_3"]
+        layerNames = ["feature_fusion/Conv_7/Sigmoid", "feature_fusion/concat_3"]
         net = readNet(east)
-        blob = blobFromImage(image, 1.0, (W, H),
-            (123.68, 116.78, 103.94), swapRB=True, crop=False)
+        blob = blobFromImage(
+            image, 1.0, (W, H), (123.68, 116.78, 103.94), swapRB=True, crop=False
+        )
         net.setInput(blob)
         (scores, geometry) = net.forward(layerNames)
-        (rects, confidences) = NaturalPhotoShabd.result_vyakhya_kro(scores, geometry,min_confidence)
+        (rects, confidences) = NaturalPhotoShabd.result_vyakhya_kro(
+            scores, geometry, min_confidence
+        )
         boxes = non_max_suppression(array(rects), probs=confidences)
         results = []
         for (startX, startY, endX, endY) in boxes:
@@ -84,19 +86,24 @@ class NaturalPhotoShabd:
             endX = min(origW, endX + (dX * 2))
             endY = min(origH, endY + (dY * 2))
             roi = orig[startY:endY, startX:endX]
-            config = ("-l eng --psm 7")
+            config = "-l eng --psm 7"
             text = image_to_string(roi, config=config)
             results.append(((startX, startY, endX, endY), text))
-        results = sorted(results, key=lambda r:r[0][1])
+        results = sorted(results, key=lambda r: r[0][1])
         output = orig.copy()
         for ((startX, startY, endX, endY), text) in results:
-            #print("OCR TEXT : ",text)
+            # print("OCR TEXT : ",text)
             text = "".join([c if ord(c) < 128 else "" for c in text]).strip()
-            #ShabdDhwani.shabd_se_dhwani(text,'english',"out.mp3")
-            #playsound('out.mp3')
-            rectangle(output, (startX, startY), (endX, endY),
-                (0, 0, 255), 1)
-            putText(output, text, (startX, startY - 20),
-                FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
+            # ShabdDhwani.shabd_se_dhwani(text,'english',"out.mp3")
+            # playsound('out.mp3')
+            rectangle(output, (startX, startY), (endX, endY), (0, 0, 255), 1)
+            putText(
+                output,
+                text,
+                (startX, startY - 20),
+                FONT_HERSHEY_SIMPLEX,
+                0.5,
+                (255, 0, 0),
+                2,
+            )
         return output
-

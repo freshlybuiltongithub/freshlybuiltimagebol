@@ -104,7 +104,7 @@ bhasha_kosh = {
     'yo': 'yoruba',
     'zu': 'zulu',
     'fil': 'Filipino',
-    'he': 'Hebrew'
-}              
+    'he': 'Hebrew',
+}
 
 bhasha_codes = dict(map(reversed, bhasha_kosh.items()))
