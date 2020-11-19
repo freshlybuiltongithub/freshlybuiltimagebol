@@ -24,8 +24,3 @@ shabd_ki_bhasha_badlo
 **********************
 
 .. automethod:: ShabdDhwani.shabd_ki_bhasha_badlo
-
-
-
-
-

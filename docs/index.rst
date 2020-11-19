@@ -18,8 +18,6 @@ But the main aim of creating this library is to introduce programming to Hindi-s
 
    references
 
-
-
 Indices and tables
 ==================
 
