@@ -30,7 +30,7 @@ d)Convert text to sound output(shabd_se_dhwani)
 Run `freshlybuiltimagebol.ShabdDhwani.shabd_se_dhwani(shabd,bhasha,filename)`. 
  
 e)Recognize text from natural scene image(natural_photo_se_text)
-Run `freshlybuiltimagebol.download('east_text_detection')` first to download the model.
+Run `freshlybuiltimagebol.imagebol_model_downloader('F_est')` first to download the model, Right now, there is only one available model i.e 'F_est'.
 Run `freshlybuiltimagebol.NaturalPhotoShabd.text_pehchano(image)`.
 
 **freshlybuiltimagebol.NaturalPhotoShabd.text_pehchano(image,min_confidence=0.85,width=320,height=320,padding=0.00)**  
@@ -86,13 +86,12 @@ method - from freshlybuiltimagebol import imagebol_model_downloader(model_name)
 *important* while updating model file , hash key must be updated. 
 
 ## Contributors
-[Vishal Sharma](https://github.com/vishal2612200/):		G.B. Pant Govt. Engineering College
+[Vishal Sharma](https://github.com/vishal2612200/):		G.B. Pant Govt. Engineering College, New Delhi
 
-[Kapil Bansal](https://github.com/KapilBansal320):		G.B. Pant Govt. Engineering College
+[Kapil Bansal](https://github.com/devkapilbansal):		G.B. Pant Govt. Engineering College, New Delhi
 
-[Ravi Pawar](https://github.com/ravi5175):		G.B. Pant Govt. Engineering College
+[Ravi Pawar](https://github.com/ravi5175):		G.B. Pant Govt. Engineering College, New Delhi
 
-[Sushmita](https://github.com/17sushmita):		G.B. Pant Govt. Engineering College
+[Sushmita](https://github.com/17sushmita):		G.B. Pant Govt. Engineering College, New Delhi
 
-[Simran](https://github.com/ishvik):		Maharaja Agrasen Institute of Technology
-
+[Simran](https://github.com/ishvik):		Maharaja Agrasen Institute of Technology, New Delhi
