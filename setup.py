@@ -35,7 +35,7 @@ setup(
         'googletrans==3.1.0a0',
         'gTTS==2.2.1',
         'gTTS-token==1.1.4',
-        'Pillow==6.1.0',
+        'Pillow==7.1.0',
         'pytesseract==0.3.2',
         'opencv-python==4.1.2.30',
         'numpy==1.16.3',
