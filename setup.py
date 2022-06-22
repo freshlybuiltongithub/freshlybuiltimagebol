@@ -38,7 +38,7 @@ setup(
         'Pillow~=7.0',
         'pytesseract==0.3.2',
         'opencv-python==4.2.0.32',
-        'numpy==1.21.0',
+        'numpy==1.22.0',
         'matplotlib==3.1.3',
         'imutils==0.5.3',
     ],
